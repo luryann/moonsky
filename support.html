@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Affirmations App Support</title>
+    <style>
+        /* --- Google Font --- */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        /* --- Global Styles & Variables --- */
+        :root {
+            --color-background: #1A1D2A; /* Corresponds to AppBackground */
+            --color-card: #2A2E40;       /* Corresponds to DetailCard */
+            --color-accent: #6A5AE0;     /* Corresponds to Accent */
+            --color-text-primary: #FFFFFF;
+            --color-text-secondary: #B0B3C3;
+            --color-border: #4A4E63;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--color-background);
+            color: var(--color-text-primary);
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+
+        /* --- Layout & Containers --- */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header .logo {
+            font-size: 50px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 10px 0;
+            color: var(--color-text-primary);
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: var(--color-text-secondary);
+        }
+
+        section {
+            background-color: var(--color-card);
+            border-radius: 18px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid var(--color-border);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 0;
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        
+        /* --- FAQ Accordion Styles --- */
+        .faq-item {
+            border-bottom: 1px solid var(--color-border);
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            padding: 20px 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--color-text-primary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 2rem;
+            color: var(--color-accent);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active::after {
+            content: '−';
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            color: var(--color-text-secondary);
+            font-weight: 300;
+        }
+        
+        .faq-answer p {
+            margin: 0;
+            padding: 0 0 20px 0;
+        }
+
+        /* --- Contact & Links Section --- */
+        .contact-button {
+            display: inline-block;
+            background-color: var(--color-accent);
+            color: #FFFFFF;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-button:hover {
+            background-color: #5848c7;
+            transform: translateY(-2px);
+        }
+
+        .resource-links a {
+            color: var(--color-accent);
+            text-decoration: none;
+            font-weight: 600;
+            display: block;
+            margin-top: 10px;
+        }
+        .resource-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo">✨</div>
+            <h1>Daily Affirmations Support</h1>
+            <p>We're here to help. Find answers to common questions below or get in touch with our team.</p>
+        </header>
+
+        <main>
+            <!-- =================================================================== -->
+            <!-- FAQ Section: Add or remove questions as needed.                     -->
+            <!-- =================================================================== -->
+            <section id="faq">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <button class="faq-question">How does the Daily Streak work?</button>
+                    <div class="faq-answer">
+                        <p>Your Daily Streak increases by one every day you open the app and view an affirmation. To keep your streak going, you must open the app at least once per day. If you miss a day, the streak will reset to zero. You can disable the streak display in the Settings tab if you prefer.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">How do I save a favorite affirmation?</button>
+                    <div class="faq-answer">
+                        <p>When you are viewing an affirmation on the detail screen, you will see a heart icon in the top-right corner. Tap this heart to save the affirmation to your Favorites. You can view all your saved affirmations by tapping the "Favorites" tab at the bottom of the screen.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">How do I set up notification reminders?</button>
+                    <div class="faq-answer">
+                        <p>Navigate to the "Notifications" tab. Here, you can enable up to three daily reminders: Morning, Midday, and Evening. For each one, you can set a specific time and choose which category of affirmations you'd like to be reminded of. The app must have permission to send notifications, which you can manage in your iPhone's Settings.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Is my data safe? Do you collect personal information?</button>
+                    <div class="faq-answer">
+                        <p>We take your privacy very seriously. The app saves all your data (like your name, favorites, and streak progress) directly and only on your device. We do not have servers, and we never collect, view, or share any of your personal information. For more details, please read our full Privacy Policy.</p>
+                    </div>
+                </div>
+
+                 <div class="faq-item">
+                    <button class="faq-question">Is the app free to use?</button>
+                    <div class="faq-answer">
+                        <p>Yes, Daily Affirmations is 100% free. All features, content, and future updates are available to all users at no cost. There are no subscriptions or in-app purchases.</p>
+                    </div>
+                </div>
+
+            </section>
+            
+            <!-- =================================================================== -->
+            <!-- Contact Section: Update the mailto link with your email address.    -->
+            <!-- =================================================================== -->
+            <section id="contact">
+                <h2>Still Need Help?</h2>
+                <p>If you couldn't find an answer in the FAQ, please feel free to send us an email. We'll get back to you as soon as possible.</p>
+                
+                <!-- IMPORTANT: Replace "support@youremail.com" with your actual support email address. -->
+                <a href="mailto:ericphuong999@gmail.com?subject=Support%20Request:%20Daily%20Affirmations%20App" class="contact-button">
+                    Email Support
+                </a>
+            </section>
+            
+            <!-- =================================================================== -->
+            <!-- Links Section: Update the privacy policy URL if needed.             -->
+            <!-- =================================================================== -->
+            <section id="links">
+                <h2>Other Resources</h2>
+                <div class="resource-links">
+                     <!-- IMPORTANT: Make sure this link points to your actual Privacy Policy. -->
+                    <a href="https://luryann.github.io/moonsky/privacy/" target="_blank">Privacy Policy</a>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <!-- IMPORTANT: Update the year and your name/company name. -->
+            <p>&copy; 2025 Tree3 LLC. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- =================================================================== -->
+    <!-- JavaScript for the FAQ Accordion functionality. No need to edit.    -->
+    <!-- =================================================================== -->
+    <script>
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isActive = question.classList.contains('active');
+
+                // Optional: Close all other open questions
+                document.querySelectorAll('.faq-question.active').forEach(activeQuestion => {
+                    if (activeQuestion !== question) {
+                        activeQuestion.classList.remove('active');
+                        activeQuestion.nextElementSibling.style.maxHeight = null;
+                        activeQuestion.nextElementSibling.style.padding = "0";
+                    }
+                });
+
+                question.classList.toggle('active');
+
+                if (question.classList.contains('active')) {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                    answer.style.padding = "0 0 20px 0";
+                } else {
+                    answer.style.maxHeight = null;
+                    answer.style.padding = "0";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
