@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Tree 3 LLC</title>
+    <meta name="description" content="Learn about the mission, story, and the team behind the Daily Affirmations app from Tree 3 LLC.">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        :root {
+            --color-background: #1A1D2A;
+            --color-card: #2A2E40;
+            --color-accent: #6A5AE0;
+            --color-text-primary: #FFFFFF;
+            --color-text-secondary: #B0B3C3;
+            --color-border: #4A4E63;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--color-background);
+            color: var(--color-text-primary);
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin: 10px 0;
+            color: var(--color-text-primary);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--color-text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        main {
+            background-color: var(--color-card);
+            border-radius: 18px;
+            padding: 40px;
+            border: 1px solid var(--color-border);
+        }
+        
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: 15px;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+        
+        .story-section p {
+            font-size: 1.1rem;
+            color: var(--color-text-secondary);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .team-member-card {
+            text-align: center;
+            padding: 20px;
+            background: var(--color-background);
+            border-radius: 12px;
+        }
+
+        .team-photo-placeholder {
+            width: 120px;
+            height: 120px;
+            background-color: var(--color-border);
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--color-text-secondary);
+        }
+        
+        .team-member-card h3 {
+            margin: 10px 0 5px 0;
+            font-size: 1.2rem;
+            color: var(--color-text-primary);
+        }
+
+        .team-member-card .role {
+            color: var(--color-accent);
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            color: var(--color-accent);
+        }
+        
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            main { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>About Tree 3 LLC</h1>
+            <p>We are a small, passionate team dedicated to creating simple, beautiful tools that support mental well-being in the digital age.</p>
+        </header>
+
+        <main>
+            <section class="story-section">
+                <h2>Our Mission & Story</h2>
+                <p>
+                    Our journey began with a simple idea: what if the device in your pocket could be a source of calm and strength? In a world filled with endless notifications and pressures, we wanted to create a quiet corner of the internet—a private sanctuary where anyone could take a moment to reset and reaffirm their worth.
+                </p>
+                <p>
+                    The Daily Affirmations app is our first step towards this mission. It was born from personal experiences with anxiety and the challenges of modern life. We believe that small, consistent acts of self-care can lead to profound changes. This app is designed to be that simple, daily act—accessible, free, and completely private for everyone.
+                </p>
+            </section>
+            
+            <section class="team-section">
+                <h2>Meet the Team</h2>
+                <div class="team-grid">
+                    <div class="team-member-card">
+                        <div class="team-photo-placeholder">✨</div>
+                        <h3>Savannah Han</h3>
+                        <p class="role">Founder & Creative Director</p>
+                    </div>
+                    <div class="team-member-card">
+                        <div class="team-photo-placeholder">💻</div>
+                        <h3>Ryan Lu</h3>
+                        <p class="role">Lead Developer</p>
+                    </div>
+                    <div class="team-member-card">
+                        <div class="team-photo-placeholder">❤️</div>
+                        <h3>Maily Han</h3>
+                        <p class="role">Sponsor & Supporter</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Tree 3 LLC</p>
+            <p>
+                <a href="index.html">Home</a> &bull;
+                <a href="support.html">Support</a> &bull;
+                <a href="privacy.html">Privacy Policy</a>
+            </p>
+            <p>&copy; 2025 Tree 3 LLC. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
